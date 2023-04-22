@@ -46,6 +46,10 @@ int _printf(const char *format, ...)
 					}
 				case ('d'):
 					{
+						print_number(va_arg(nextVar, int));
+						index++;
+						break;
+					}
 				default:
 					break;
 			}
