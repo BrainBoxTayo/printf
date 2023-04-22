@@ -11,6 +11,8 @@ int _printf(const char *format, ...)
 	int index = 0, count = 0;
 
 	va_start(nextVar, format);
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
 	while (format[index])
 	{
 		/*this is for string*/
