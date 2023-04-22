@@ -37,7 +37,13 @@ int _printf(const char *format, ...)
 							_putchar(str[size_str]);
 						index++;
 						break;
-					}					
+					}
+				case ('c'):
+					{
+						_putchar(va_arg(nextVar, int));
+						index++;
+						break;
+					}
 				default:
 					break;
 			}
