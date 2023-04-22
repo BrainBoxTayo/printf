@@ -5,5 +5,6 @@ int main()
 	char *str = "temitayo";
 	char alpha = 'c';
 	int number = -200000;
-	_printf("This is a %s, %c, %d\n", str, alpha, number);
+	int number2 = 0x6400;
+	_printf("This is a %s, %c, %d, %i\n", str, alpha, number, number2);
 }
