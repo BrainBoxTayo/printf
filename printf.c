@@ -46,8 +46,10 @@ int _printf(const char *format, ...)
 					}
 				case ('i'):
 					{
-						count += print_number(va_arg(nextVar, int));
+						int num = va_arg(nextVar, int);
+						print_number(num);
 						index++;
+						count += count_digits(num);
 						break;
 					}
 				default:
@@ -61,5 +63,16 @@ int _printf(const char *format, ...)
 		index++;
 	}
 	va_end(nextVar);
-	return (count);
+	return (count + 1);
+}
+
+int count_digits(int num)
+{
+	int count = 0;
+	while (num != 0)
+	{
+		count++;
+		num /= 10;
+	}
+	return count;
 }
