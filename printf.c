@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdarg.h>
 #include"main.h"
+
 /**
   * _printf - formatted printing
   * @format: string to be printed {"this is an integer %d"}
