@@ -5,8 +5,9 @@
   * Return: nothing
   */
 
-void print_number(int n)
+int print_number(int n)
 {
+	int count = 0;
 	unsigned int num = 0;
 
 	if (n < 0)
@@ -24,4 +25,6 @@ void print_number(int n)
 		print_number(num / 10);
 	/*print last digit*/
 	_putchar((num % 10) + 48);
+	count++;
+	return (count);
 }
