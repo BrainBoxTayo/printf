@@ -44,6 +44,8 @@ int _printf(const char *format, ...)
 						index++;
 						break;
 					}
+				case ('d'):
+					{
 				default:
 					break;
 			}
