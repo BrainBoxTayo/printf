@@ -70,18 +70,9 @@ int count_digits(int num)
  */
 void print_num_recursive(int num)
 {
-	unsigned int n;
-
-	if (num < 0)
+	if (num / 10)
 	{
-		_putchar('-');
-		n = -num;
+		print_num_recursive(num / 10);
 	}
-	else
-		n = num;
-	if (n / 10)
-	{
-		print_num_recursive(n / 10);
-	}
-	_putchar(n % 10 + '0');
+	_putchar(num % 10 + '0');
 }
