@@ -2,5 +2,6 @@
 #include"main.h"
 int main()
 {
-	_printf("This is a %s", "string\n");
+	char *str = "temitayo\n";
+	_printf("This is a %s", str);
 }
