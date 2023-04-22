@@ -71,6 +71,7 @@ int count_digits(int num)
 void print_num_recursive(int num)
 {
 	unsigned int n;
+
 	if (num < 0)
 	{
 		_putchar('-');
