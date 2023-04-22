@@ -7,37 +7,38 @@
  */
 int _printf(const char *format, ...)
 {
-    va_list nextVar;
-    int index = 0, count = 0;
-    va_start(nextVar, format);
-    while (format[index])
-    {
-        /*this is for string*/
-        if (format[index] == '%')
-        {
-            index++;
-            switch (format[index])
-            {
-                case ('s'):
-                    count += print_string(nextVar);
-                    break;
-                case ('c'):
-                    count += print_char(nextVar);
-                    break;
-                case ('d'):
-                case ('i'):
-                    count += print_number(nextVar);
-                    break;
-                default:
-                    break;
-            }
-        }
-        else
-        {
-            count += _putchar(format[index]);
-        }
-        index++;
-    }
-    va_end(nextVar);
-    return count;
+	va_list nextVar;
+	int index = 0, count = 0;
+
+	va_start(nextVar, format);
+	while (format[index])
+	{
+		/*this is for string*/
+		if (format[index] == '%')
+		{
+			index++;
+			switch (format[index])
+			{
+				case ('s'):
+					count += print_string(nextVar);
+					break;
+				case ('c'):
+					count += print_char(nextVar);
+					break;
+				case ('d'):
+				case ('i'):
+					count += print_number(nextVar);
+					break;
+				default:
+					break;
+			}
+		}
+		else
+		{
+			count += _putchar(format[index]);
+		}
+		index++;
+	}
+	va_end(nextVar);
+	return (count);
 }

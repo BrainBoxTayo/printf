@@ -10,12 +10,13 @@ int print_string(va_list nextVar)
 {
 	char *str;
 	int count = 0, size_str;
+
 	str = va_arg(nextVar, char *);
 	for (size_str = 0; str[size_str]; size_str++)
 	{
 		count += _putchar(str[size_str]);
 	}
-	return count;
+	return (count);
 }
 
 /**
@@ -26,8 +27,9 @@ int print_string(va_list nextVar)
 int print_char(va_list nextVar)
 {
 	int count = 0;
+
 	count += _putchar(va_arg(nextVar, int));
-	return count;
+	return (count);
 }
 
 /**
@@ -39,8 +41,9 @@ int print_number(va_list nextVar)
 {
 	int num = va_arg(nextVar, int);
 	int count = count_digits(num);
+
 	print_num_recursive(num);
-	return count;
+	return (count);
 }
 /**
  * count_digits - counts the number of digits in an integer
@@ -50,12 +53,13 @@ int print_number(va_list nextVar)
 int count_digits(int num)
 {
 	int count = 0;
+
 	while (num != 0)
 	{
 		count++;
 		num /= 10;
 	}
-	return count;
+	return (count);
 }
 /**
  * print_num_recursive - recursively prints a decimal integer
