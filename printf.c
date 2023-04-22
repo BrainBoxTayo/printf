@@ -8,8 +8,10 @@
 
 int _printf(const char *format, ...)
 {
+	va_list nextVar;
 	int form_size;
 
+	va_start(nextVar, format);
 	for (form_size = 0; format[form_size] != '\0'; form_size++)
 		;
 
@@ -18,6 +20,7 @@ int _printf(const char *format, ...)
 	/**/
 	while (format)
 	{
+
 
 	}
 
