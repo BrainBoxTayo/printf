@@ -12,17 +12,17 @@ int _printf(const char *format, ...)
 {
 	va_list nextVar;
 	int form_size, index = 0;
-	char *str, *malloc_str, size_str;
+	char *str, size_str;
 
 	va_start(nextVar, format);
 	for (form_size = 0; format[form_size] != '\0'; form_size++)
 		;
-	malloc_str = malloc(form_size + 1 * sizeof(char));
+
 
 	/*"this is a %c boy"*/
 
 	/**/
-	while (format != NULL)
+	while (format[index])
 	{
 		/*this is for string*/
 		if (format[index] == '%')
@@ -49,6 +49,5 @@ int _printf(const char *format, ...)
 		index++;
 	}
 	va_end(nextVar);
-	free(malloc_str);
 	return (form_size);
 }
