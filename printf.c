@@ -44,5 +44,5 @@ int _printf(const char *format, ...)
 		index++;
 	}
 	va_end(nextVar);
-	return (count);
+	return (count + 1);
 }

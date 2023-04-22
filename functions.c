@@ -12,6 +12,8 @@ int print_string(va_list nextVar)
 	int count = 0, size_str;
 
 	str = va_arg(nextVar, char *);
+	if (!str)
+		str = "(null)";
 	for (size_str = 0; str[size_str]; size_str++)
 	{
 		count += _putchar(str[size_str]);
@@ -39,7 +41,7 @@ int print_char(va_list nextVar)
  */
 int print_number(va_list nextVar)
 {
-	int num = va_arg(nextVar, int);
+	unsigned int num = va_arg(nextVar, int);
 	int count = count_digits(num);
 
 	print_num_recursive(num);
@@ -68,9 +70,17 @@ int count_digits(int num)
  */
 void print_num_recursive(int num)
 {
-	if (num / 10)
+	unsigned int n;
+	if (num < 0)
 	{
-		print_num_recursive(num / 10);
+		_putchar('-');
+		n = -num;
 	}
-	_putchar(num % 10 + '0');
+	else
+		n = num;
+	if (n / 10)
+	{
+		print_num_recursive(n / 10);
+	}
+	_putchar(n % 10 + '0');
 }
