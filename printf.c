@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include<stddef.h>
 #include "main.h"
 /**
  * _printf - formatted printing
@@ -10,6 +11,8 @@ int _printf(const char *format, ...)
 	va_list nextVar;
 	int index = 0, count = 0;
 
+	if (format == NULL)
+		return (-1);
 	va_start(nextVar, format);
 	while (format[index])
 	{

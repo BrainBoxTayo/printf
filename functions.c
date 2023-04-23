@@ -12,6 +12,10 @@ int print_string(va_list nextVar)
 	int count = 0, size_str;
 
 	str = va_arg(nextVar, char *);
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
 	for (size_str = 0; str[size_str]; size_str++)
 	{
 		count += _putchar(str[size_str]);
