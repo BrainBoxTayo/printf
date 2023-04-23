@@ -13,7 +13,7 @@ int main(void)
     int len2, len3, len4;
     unsigned int ui;
     void *addr;
-    char *NULLSTR = NULL;
+    __attribute__((unused))char *NULLSTR = NULL;
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
@@ -21,8 +21,9 @@ int main(void)
     addr = (void *)0x7ffe637541f0;
     printf("%%%%\n");
     printf("%%%%\n");
-    _printf("%s \n", NULLSTR);
-    _printf("%s \n", NULLSTR);
+    len3 = _printf("\0");
+    len4 = printf("\0");
+    printf("%d %d\n", len3, len4);
     _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
     len3 = _printf("Negative:[%i]\n", -762534);
