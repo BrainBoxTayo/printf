@@ -3,6 +3,7 @@
 #include<stdarg.h>
 #include<stddef.h>
 
+int switch_help(char character, va_list nextVar);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_string(va_list nextVar);
