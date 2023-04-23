@@ -16,8 +16,6 @@ int print_string(va_list nextVar)
 	{
 		str = "(null)";
 	}
-	if (str[0] == '\0')
-		return (-1);
 	for (size_str = 0; str[size_str]; size_str++)
 	{
 		count += _putchar(str[size_str]);
