@@ -20,6 +20,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[index] == '%')
 		{
+			if (!format[index + 1] || (format[index + 1] == ' ' && !format[index + 2]))
+			{
+				count = -1;
+				break;
+			}
 			index++;
 			count += switch_help(format[index], nextVar);
 		}
