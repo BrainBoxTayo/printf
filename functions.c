@@ -68,6 +68,11 @@ int count_digits(int num)
  */
 void print_num_recursive(int num)
 {
+	if (num < 0)
+	{
+		num = -num;
+		_putchar('-');
+	}
 	if (num / 10)
 	{
 		print_num_recursive(num / 10);
