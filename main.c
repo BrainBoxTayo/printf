@@ -10,7 +10,7 @@
 int main(void)
 {
     int len;
-    int len2;
+    int len2, len3, len4;
     unsigned int ui;
     void *addr;
     char *NULLSTR = NULL;
@@ -25,8 +25,9 @@ int main(void)
     _printf("%s \n", NULLSTR);
     _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%i]\n", -762534);
-    printf("Negative:[%i]\n", -762534);
+    len3 = _printf("Negative:[%i]\n", -762534);
+    len4 = printf("Negative:[%i]\n", -762534);
+    printf("%d %d\n", len3, len4);
     _printf("Unsigned:[%u]\n", ui);
     printf("Unsigned:[%u]\n", ui);
     _printf("Unsigned octal:[%o]\n", ui);

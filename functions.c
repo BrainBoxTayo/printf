@@ -46,6 +46,8 @@ int print_number(va_list nextVar)
 	int num = va_arg(nextVar, int);
 	int count = count_digits(num);
 
+	if (num < 0)
+		count += 1;
 	print_num_recursive(num);
 	return (count);
 }
@@ -63,6 +65,8 @@ int count_digits(int num)
 		count++;
 		num /= 10;
 	}
+	if (num < 0)
+		count += 1;
 	return (count);
 }
 /**

@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 				case ('d'):
 				case ('i'):
 					count += print_number(nextVar);
+
 					break;
 				case ('%'):
 					count += _putchar('%');
