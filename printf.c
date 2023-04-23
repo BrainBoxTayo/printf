@@ -12,9 +12,7 @@ int _printf(const char *format, ...)
 	int index = 0, count = 0;
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	va_start(nextVar, format);
 	while (format[index])
 	{
