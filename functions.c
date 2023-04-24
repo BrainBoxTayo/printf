@@ -63,8 +63,6 @@ int count_digits(int num)
 		count++;
 		num /= 10;
 	}
-	if (num < 0)
-		count += 1;
 	return (count);
 }
 /**
@@ -85,4 +83,3 @@ void print_num_recursive(int num)
 	}
 	_putchar(num % 10 + '0');
 }
-

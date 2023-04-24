@@ -3,7 +3,13 @@
 #include<stdarg.h>
 #include<stddef.h>
 #include<stdlib.h>
+
+int print_HEX_int(va_list nextVar);
+int print_hex_int(va_list nextVar);
+int print_number_oct(va_list nextVar);
+void print_ui_recursive(unsigned int num);
 int print_number_bin(va_list nextVar);
+int print_unsigned_number(va_list nextVar);
 int switch_help(char character, va_list nextVar);
 int _printf(const char *format, ...);
 int _putchar(char c);
