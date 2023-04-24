@@ -2,7 +2,8 @@
 #define MAIN_H
 #include<stdarg.h>
 #include<stddef.h>
-
+#include<stdlib.h>
+int print_number_bin(va_list nextVar);
 int switch_help(char character, va_list nextVar);
 int _printf(const char *format, ...);
 int _putchar(char c);

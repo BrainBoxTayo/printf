@@ -55,8 +55,13 @@ int switch_help(char character, va_list nextVar)
 			count += print_char(nextVar);
 			break;
 		case ('d'):
+			count += print_number(nextVar);
+			break;
 		case ('i'):
 			count += print_number(nextVar);
+			break;
+		case ('b'):
+			count += print_number_bin(nextVar);
 			break;
 		case ('%'):
 			count += _putchar('%');

@@ -1,6 +1,4 @@
-#include <stdarg.h>
 #include "main.h"
-
 /**
  * print_string - prints a string
  * @nextVar: the va_list containing the next argument
@@ -87,3 +85,4 @@ void print_num_recursive(int num)
 	}
 	_putchar(num % 10 + '0');
 }
+
