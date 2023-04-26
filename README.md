@@ -6,3 +6,4 @@
 ### LOGS:
 1. Created Repository and read up on printf and formatting -- Friday 21st
 1. finished task 0 and fully defined %c %s and %% -- Sunday 23rd
+1. did %d %i %o %x %X %u -- monday 24th
